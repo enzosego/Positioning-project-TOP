@@ -1,0 +1,554 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 98.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sticky-sub {
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  width: 100%;
+  height: 71px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-top: 1px solid #555555;
+  font-size: 0.6rem;
+}
+.sticky-sub h1 {
+  margin-left: 20px;
+}
+.sticky-sub .arrow-container {
+  width: 55px;
+  height: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #e1e1e1;
+  font-size: 1rem;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+header nav {
+  position: fixed;
+  z-index: 1;
+  background: white;
+  width: 100%;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e1e1e1;
+}
+@media (min-width: 769px) {
+  header nav {
+    height: 43px;
+  }
+  header nav .fa-user {
+    position: absolute;
+    visibility: hidden;
+  }
+  header nav .sub-log-btns, header nav .fa-search,
+header nav .space-cosmos {
+    display: unset;
+  }
+}
+header .burger__cont {
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 18px;
+}
+header .burger__cont:hover {
+  cursor: pointer;
+}
+header .burger__cont .burger__button {
+  background: #373737;
+  width: 15px;
+  height: 2px;
+  position: relative;
+}
+header .burger__cont .burger__button::before {
+  background: #373737;
+  width: 15px;
+  height: 2px;
+  position: absolute;
+  content: "";
+  transform: translateY(4px);
+}
+header .burger__cont .burger__button::after {
+  background: #373737;
+  width: 15px;
+  height: 2px;
+  position: absolute;
+  content: "";
+  transform: translateY(-4px);
+}
+header .nyt__logo {
+  height: 25px;
+  width: 190px;
+  background-image: url("images/NewYorkTimes.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 769px) {
+  header .nyt__logo {
+    position: absolute;
+    top: 10px;
+    left: 42.5%;
+  }
+}
+header .fa-user {
+  color: #373737;
+  margin-right: 18px;
+  cursor: pointer;
+}
+header .fa-search {
+  position: absolute;
+  left: 60px;
+  font-size: 0.9rem;
+  display: none;
+}
+header .space-cosmos {
+  position: absolute;
+  left: 100px;
+  font-size: 0.9rem;
+  color: black;
+  display: none;
+}
+header .sub-log-btns {
+  margin-right: 15px;
+  display: none;
+}
+header .sub-log-btns button {
+  padding: 9px;
+  background: #567b95;
+  border: 1px solid #326891;
+  border-radius: 4px;
+  color: #fff;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.7rem;
+  transition: 0.8s;
+}
+header .sub-log-btns button:hover {
+  cursor: pointer;
+  background: #326891;
+}
+header .log-sub {
+  margin-top: 62px;
+  margin-right: 20px;
+  align-self: flex-end;
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: #216BC0;
+}
+header .log-sub__subscribe {
+  padding-right: 7px;
+  border-right: 1px solid #e1e1e1;
+  cursor: pointer;
+}
+header .log-sub__login {
+  padding-left: 7px;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  header .log-sub {
+    display: none;
+  }
+}
+
+main {
+  margin-top: 35px;
+  margin: 35px 4% auto 4%;
+  width: 92%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 769px) {
+  main {
+    margin-top: 95px;
+  }
+}
+main header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main header .title-cont {
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e1e1e1;
+}
+@media (min-width: 769px) {
+  main header .title-cont {
+    width: 50%;
+  }
+}
+main header .title-cont h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  color: #0a0a0a;
+}
+main header .icons-cont {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+}
+@media (min-width: 769px) {
+  main header .icons-cont {
+    width: 50%;
+  }
+}
+main header .icons-cont .icon {
+  margin-right: 18px;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #e1e1e1;
+  border: 1px solid #e1e1e1;
+}
+main header .icons-cont .icon:hover {
+  background: inherit;
+  cursor: pointer;
+}
+main header .icons-cont .icon i {
+  font-size: 0.9rem;
+  margin: 0;
+  color: black;
+}
+main header .icons-cont .icon img {
+  width: 60%;
+  height: auto;
+}
+main header .icons-cont .icon .fa-share {
+  font-size: 0.5rem;
+  color: black;
+}
+main header .icons-cont .banner {
+  height: 25px;
+  width: 15px;
+  margin-right: 18px;
+  background-image: url("images/banner.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+main header .icons-cont i {
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+main header .icons-cont .comment-num {
+  position: absolute;
+  font-size: 0.7rem;
+  bottom: 10px;
+  left: 211px;
+  pointer-events: none;
+}
+main .header__image {
+  margin-top: 20px;
+  height: auto;
+  width: 100vw;
+  cursor: pointer;
+}
+@media (min-width: 769px) {
+  main .header__image {
+    width: 1000px;
+  }
+}
+main .image__description {
+  display: inline;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 15px 4% 35px 4%;
+  color: #646464;
+}
+@media (min-width: 769px) {
+  main .image__description {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+main .image__description h2 {
+  font-size: 0.8rem;
+  color: #919191;
+  font-weight: 500;
+}
+main .image__description strong {
+  font-size: 0.97rem;
+  font-weight: 500;
+  color: #646464;
+}
+main .content {
+  width: 100%;
+  color: #232323;
+}
+@media (min-width: 769px) {
+  main .content {
+    width: 52%;
+  }
+}
+main .content header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+}
+main .content header h4 {
+  margin-bottom: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+}
+main .content header h4 a {
+  text-decoration: underline;
+  color: inherit;
+}
+main .content header h4 a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+main .content header h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  color: #323232;
+}
+main p {
+  color: #323232;
+  margin-top: 15px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.25rem;
+}
+main .subtitle {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-top: 15px;
+}
+main .theory__grid {
+  position: relative;
+  margin-top: 35px;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+@media (min-width: 769px) {
+  main .theory__grid {
+    overflow: visible;
+  }
+}
+main .theory__grid h3 {
+  color: #0a0a0a;
+}
+main .theory__grid h4 {
+  margin-top: 10px;
+  color: #646464;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+main .theory__grid img {
+  margin-top: 20px;
+  width: 945px;
+  height: auto;
+}
+@media (min-width: 769px) {
+  main .theory__grid img {
+    position: absolute;
+    left: -150px;
+  }
+}
+main .theory__grid .row {
+  position: absolute;
+  display: flex;
+}
+@media (min-width: 769px) {
+  main .theory__grid .row {
+    left: -150px;
+  }
+}
+main .theory__grid .row p {
+  width: 230px;
+  margin-left: 10px;
+  font-size: 0.85rem;
+}
+main .theory__grid .row p strong {
+  font-size: 0.75rem;
+  color: black;
+}
+main .theory__grid .one {
+  top: 250px;
+}
+main .theory__grid .two {
+  top: 520px;
+}
+main .line {
+  margin-top: 30px;
+  width: 60px;
+  height: 10px;
+  border-bottom: 1px solid black;
+}
+@media (min-width: 769px) {
+  main .line {
+    margin-top: 620px;
+  }
+}
+main .by-name {
+  margin-top: 15px;
+  margin-bottom: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+main .video {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+main .video .iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+@media (max-width: 768px) {
+  main .video .iframe-container {
+    overflow: visible;
+    width: 98.7vw;
+    left: -30px;
+  }
+}
+main .video .iframe-container iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+@media (max-width: 768px) {
+  main .video .iframe-container iframe {
+    width: 98.7vw;
+  }
+}
+main .video h5 {
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.67rem;
+  font-weight: 500;
+  color: #919191;
+}
+main .video h5 strong {
+  color: #646464;
+  font-size: 0.8rem;
+}
+main .cosmos-image {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+main .cosmos-image img {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  main .cosmos-image img {
+    margin-left: -28px;
+    width: 98.7vw;
+  }
+}
+main .cosmos-image h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 0.93rem;
+  font-weight: 500;
+  color: #646464;
+  width: 100%;
+}
+main .cosmos-image h3 strong {
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: #919191;
+}
+main footer {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+main footer p {
+  margin-bottom: 25px;
+  font-size: 0.7rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #919191;
+}
+main footer p a {
+  color: inherit;
+}
+main footer p a:hover {
+  text-decoration: none;
+}
+main footer .footter__buttons {
+  display: flex;
+  flex-direction: row;
+}
+main footer button {
+  width: 100%;
+  padding: 0.6em;
+  border: 1px solid #326891;
+  border-radius: 3px;
+  font-family: Helvetica;
+  font-size: 1rem;
+  color: white;
+  background: #567b95;
+  transition: 0.7s;
+}
+@media (min-width: 769px) {
+  main footer button {
+    width: 55%;
+  }
+}
+main footer button:hover {
+  background: #326891;
+  cursor: pointer;
+}
+main footer .icons-cont {
+  margin-top: 20px;
+  display: flex;
+}
+main footer .icons-cont .icon {
+  height: 28px;
+  min-width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e1e1e1;
+  border: 1px solid #e1e1e1;
+  font-size: 0.8rem;
+  margin-right: 20px;
+}
+main footer .icons-cont .icon:hover {
+  cursor: pointer;
+  background: inherit;
+}
+main footer .icons-cont .icon img {
+  width: 15px;
+  height: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */

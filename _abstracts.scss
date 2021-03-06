@@ -1,0 +1,32 @@
+$rgb50: rgb(50, 50, 50);
+$rgb100: rgb(100, 100, 100);
+$rgb145: rgb(145, 145, 145);
+$rgb225: rgb(225, 225, 225);
+
+$arial: Arial, Helvetica, sans-serif;
+$georgia: Georgia, 'Times New Roman', Times, serif;
+
+@mixin line($width, $height, $color) {
+  background: $color;
+  width: $width;
+  height: $height;
+}
+
+@mixin burger-btn($width, $height, $color ,$translate) {
+  @include line($width, $height, $color);
+  position: relative;
+
+  &::before {
+    @include line($width, $height, $color);
+    position: absolute;
+    content: '';
+    transform: translateY($translate);
+  }
+
+  &::after {
+    @include line($width, $height, $color);
+    position: absolute;
+    content: '';
+    transform: translateY(-#{$translate});
+  }
+}
