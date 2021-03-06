@@ -518,8 +518,12 @@ main {
 
   footer {
     margin-top: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 90px;
     width: 100%;
+
+    @include media('>tablet') {
+      width: 52%;
+    }
 
     p {
       margin-bottom: 25px;

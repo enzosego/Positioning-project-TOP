@@ -487,8 +487,13 @@ main .cosmos-image h3 strong {
 }
 main footer {
   margin-top: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 90px;
   width: 100%;
+}
+@media (min-width: 769px) {
+  main footer {
+    width: 52%;
+  }
 }
 main footer p {
   margin-bottom: 25px;
